@@ -2,34 +2,29 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 
 const heading = React.createElement(
-    'h1', 
-    { id: 'heading' },
-    'Hello World'
+    'h1',
+    {id: 'heading'}, 
+    'Namaste React'
 )
-const parent = React.createElement(
-    'div',
-    {id: 'parent'},
-    React.createElement(
-        'div',
-        {id: 'child'},
-        [
-            React.createElement(
-                'h1',
-                {},
-                'H1 tag says hi'
-            ),
-            React.createElement(
-                'h2',
-                {},
-                'Another h2 says hi ok'
-            ),
-            React.createElement(
-                'h2',
-                {},
-                'H2 tag'
-            ),
-        ]
+const jsxheading = (
+    <h1 id="heading">
+        This is jsx heading
+    </h1>
+)
+
+// React Functional Component
+const FunctionalComponent = () => {
+    return (
+        <div>
+            <h1>FC 1</h1>
+            <h1>FC 2</h1>
+        </div>
     )
-)
+}
+
+console.log(heading)
+console.log(jsxheading)
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(parent)
+
+root.render(<FunctionalComponent />)
