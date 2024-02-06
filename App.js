@@ -1,6 +1,30 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
+const resList = [
+  {
+    id: 1,
+    imageSrc: 'https://www.logodesign.net/logo/smoking-burger-with-luttuce-3624ld.png',
+    resName: 'Meghna Foods',
+    cuisine: ['Biryani', 'North Indian', 'Asian'],
+    stars: 4.4
+  },
+  {
+    id: 2,
+    imageSrc: 'https://www.logodesign.net/logo/smoking-burger-with-luttuce-3624ld.png',
+    resName: 'KFC',
+    cuisine: ['Burger', 'Chicken'],
+    stars: 4.2
+  },
+  {
+    id: 3,
+    imageSrc: 'https://www.logodesign.net/logo/smoking-burger-with-luttuce-3624ld.png',
+    resName: 'Dominos',
+    cuisine: ['Pizza'],
+    stars: 4.5
+  }
+]
+
 const Header = () => {
   return (
     <div className="header">
@@ -19,17 +43,19 @@ const Header = () => {
   )
 }
 
-const RestaurentCard = () => {
+const RestaurentCard = (props) => {
+  const { imageSrc, resName, stars } = props.data
+  const cuisine = props.data.cuisine.join()
   return (
     <div className="res-card" style={{background: '#f0f0f0'}}>
       <img 
         className="res-logo"
         alt="res-logo"
-        src="https://www.logodesign.net/logo/smoking-burger-with-luttuce-3624ld.png"
+        src={imageSrc}
       />
-      <h3>Meghana Foods</h3>
-      <h4>Biryani, North Indian, Asian</h4>
-      <h4>4.4 stars</h4>
+      <h3>{resName}</h3>
+      <h4>{cuisine}</h4>
+      <h4>{stars + ' stars'}</h4>
     </div>
   )
 }
@@ -39,17 +65,9 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
+        {resList.map((res) => {
+          return <RestaurentCard key={res.id} data={res} />
+        })}
       </div>
     </div>
   )
