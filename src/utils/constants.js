@@ -1,0 +1,1 @@
+export const IMG_URL = 'https://www.logodesign.net/logo/smoking-burger-with-luttuce-3624ld.png';

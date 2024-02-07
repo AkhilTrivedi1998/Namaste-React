@@ -20,3 +20,12 @@ Namaste React Course
 # Babel
 - Helps to transpile the code(converts jsx to react element, which then again gets converted to html & js when rendered)
 - It is one of the packages used by parcel while bundling the code
+
+# Default Export/Import
+- export default Component;
+- import Component from 'path';
+
+# Named export / import
+- export const Component;
+- import {Component} from 'path';
+
