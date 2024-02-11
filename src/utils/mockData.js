@@ -21,6 +21,20 @@ const resList = [
       resName: 'Dominos',
       cuisine: ['Pizza'],
       stars: 4.5
+    },
+    {
+      id: 4,
+      imageSrc: IMG_URL,
+      resName: 'Paratha House',
+      cuisine: ['Paratha'],
+      stars: 3.1
+    },
+    {
+      id: 5,
+      imageSrc: IMG_URL,
+      resName: 'Haldiram',
+      cuisine: ['Kaju barfi'],
+      stars: 3.1
     }
 ]
 

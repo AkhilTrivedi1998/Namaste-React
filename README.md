@@ -29,3 +29,8 @@ Namaste React Course
 - export const Component;
 - import {Component} from 'path';
 
+# React Hooks
+(Normal JS utility function)
+- useState() - Helps create state variables
+- useEffect()
+
