@@ -32,5 +32,15 @@ Namaste React Course
 # React Hooks
 (Normal JS utility function)
 - useState() - Helps create state variables
-- useEffect()
+- useEffect():
+    - If no dependency array => useEffect is called on every render.
+    - If dependency array is empty [] => useEffect is called on initial render
+    - If dependency array contains some variable => useEffect will be called everytime the variable changes
+    - (NOTE: useEffect is called on initial render everytime doesn't matter the dependency array)
+
+# rfce is used to create boilerplate of a react functional component in vs code.
+
+# There are 2 types of Routing-
+- Server side routing - Whenever we route to a different path a request is sent to the server to get that web page.
+- Client side routing - We already have the components for every Link used within the page, so no request is made to the server to get the web page instead the components are just refreshed.
 
